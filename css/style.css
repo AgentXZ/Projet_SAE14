@@ -31,7 +31,6 @@ body {
     gap: 2rem;
 }
 
-
 .header {
     background: rgba(26, 71, 42, 0.95);
     border-bottom: 2px solid var(--accent-color);
@@ -48,11 +47,78 @@ body {
     list-style: none;
 }
 
-
-.nav-link {
+.nav-links {
     color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
+
+.nav-links:hover {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.nav-links.active {
+    background: var(--accent-color);
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+
+
+.rules-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+.rules-main-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(26, 71, 42, 0.8), rgba(45, 90, 61, 0.6));
+    border-radius: var(--border-radius);
+    border: 1px solid var(--accent-color);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.rules-main-section h2 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.rules-content {
+    display: grid;
+    gap: 3rem;
+}
+
+.rules-section {
+    background: rgba(26, 26, 26, 0.9);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.rules-section h3 {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rules-section:hover {
+    transform: translateY(-5px);
+}
+
