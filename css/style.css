@@ -105,7 +105,8 @@ body {
     padding: 2.5rem;
     border-radius: var(--border-radius);
     border-left: 4px solid var(--accent-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.28s ease-out, box-shadow 0.28s ease-out;
+    will-change: transform;
     animation: slideInLeft 0.6s ease-out;
 }
 
@@ -119,8 +120,25 @@ body {
 }
 
 .rules-section:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
 }
+
+.rules-section p,
+.rules-section li {
+    line-height: 1.7;
+}
+
+.rules-section ul {
+    padding-left: 1.4rem;
+    margin-top: 0.75rem;
+}
+
+.rules-section li {
+    margin-bottom: 0.5rem;
+}
+
+
 
 .gameplay {
     display: grid;
@@ -136,11 +154,12 @@ body {
     padding: 2rem;
     border-radius: var(--border-radius);
     border-left: 4px solid var(--accent-color);
-    transition: var(--transition);
+    transition: transform 0.28s ease-out, box-shadow 0.28s ease-out;
+    will-change: transform;
 }
 
 .gameplay-flow:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
 }
 
@@ -156,10 +175,65 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
 .step-content h4 {
     color: var(--accent-color);
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
+}
+
+
+/* Page Accueil */
+
+.home-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+
+.home-main-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(26, 71, 42, 0.8), rgba(45, 90, 61, 0.6));
+    border-radius: var(--border-radius);
+    border: 1px solid var(--accent-color);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.home-main-section h2 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+
+/* Page à propos de moi */
+
+.about-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+
+.about-main-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(26, 71, 42, 0.8), rgba(45, 90, 61, 0.6));
+    border-radius: var(--border-radius);
+    border: 1px solid var(--accent-color);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.about-main-section h2 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
 }
