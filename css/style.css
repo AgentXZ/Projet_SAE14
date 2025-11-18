@@ -1,12 +1,16 @@
 :root {
-    --primary-color: #1a472a;
-    --secondary-color: #2d5a3d;
-    --accent-color: #ffd700;
+    --primary-color: #0f212e;
+    --secondary-color: #1a2c38;
+    --accent-color: #00e701;
+    --accent-secondary: #ffc107;
     --background-dark: #0f1419;
-    --background-light: #1a1a1a;
+    --background-light: #1a2c38;
     --text-light: #ffffff;
-    --text-dark: #333333;
-    --border-radius: 12px;
+    --text-muted: #b1bad3;
+    --text-dark: #0f212e;
+    --border-radius: 8px;
+    --gradient-primary: linear-gradient(135deg, #0f212e 0%, #1a2c38 100%);
+    --gradient-accent: linear-gradient(135deg, #00e701 0%, #00bf01 100%);
 }
 
 * {
@@ -32,12 +36,14 @@ body {
 }
 
 .header {
-    background: rgba(26, 71, 42, 0.95);
-    border-bottom: 2px solid var(--accent-color);
+    background: var(--gradient-primary);
+    border-bottom: 1px solid rgba(0, 231, 1, 0.3);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
     animation: slideDown 0.6s ease-out;
+    backdrop-filter: blur(10px);
 }
 
 .nav-menu {
@@ -48,7 +54,7 @@ body {
 }
 
 .nav-links {
-    color: var(--text-light);
+    color: var(--text-muted);
     text-decoration: none;
     font-weight: 500;
     padding: 0.8rem 1.5rem;
@@ -59,15 +65,17 @@ body {
 }
 
 .nav-links:hover {
-    background: rgba(255, 215, 0, 0.1);
+    background: rgba(0, 231, 1, 0.1);
     color: var(--accent-color);
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 231, 1, 0.2);
 }
 
 .nav-links.active {
-    background: var(--accent-color);
+    background: var(--gradient-accent);
     color: var(--text-dark);
     font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 231, 1, 0.4);
 }
 
 
@@ -76,17 +84,20 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 2rem;
-    min-height: calc(100vh - 80px);
+    min-height: 500px;
 }
 
 .rules-main-section {
     text-align: center;
     margin-bottom: 4rem;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(26, 71, 42, 0.8), rgba(45, 90, 61, 0.6));
-    border-radius: var(--border-radius);
-    border: 1px solid var(--accent-color);
+    padding: 3rem 2rem;
+    background: var(--gradient-primary);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 231, 1, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     animation: fadeInUp 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
 }
 
 .rules-main-section h2 {
@@ -101,13 +112,16 @@ body {
 }
 
 .rules-section {
-    background: rgba(26, 26, 26, 0.9);
+    background: var(--gradient-primary);
     padding: 2.5rem;
-    border-radius: var(--border-radius);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 231, 1, 0.2);
     border-left: 4px solid var(--accent-color);
-    transition: transform 0.28s ease-out, box-shadow 0.28s ease-out;
-    will-change: transform;
+    transition: all 0.3s ease;
+    
     animation: slideInLeft 0.6s ease-out;
+    position: relative;
+    overflow: hidden;
 }
 
 .rules-section h3 {
@@ -120,18 +134,21 @@ body {
 }
 
 .rules-section:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 231, 1, 0.3);
+    border-color: var(--accent-color);
 }
 
 .rules-section p,
 .rules-section li {
     line-height: 1.7;
+    color: var(--text-muted);
 }
 
 .rules-section ul {
     padding-left: 1.4rem;
     margin-top: 0.75rem;
+    list-style-type: disc;
 }
 
 .rules-section li {
@@ -150,23 +167,25 @@ body {
     grid-template-columns: auto 1fr;
     gap: 2rem;
     align-items: start;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--gradient-primary);
     padding: 2rem;
-    border-radius: var(--border-radius);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 231, 1, 0.2);
     border-left: 4px solid var(--accent-color);
-    transition: transform 0.28s ease-out, box-shadow 0.28s ease-out;
-    will-change: transform;
+    transition: all 0.3s ease;
+    
 }
 
 .gameplay-flow:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 231, 1, 0.3);
+    border-color: var(--accent-color);
 }
 
 .step-number {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--accent-color), #ffed4e);
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-accent);
     color: var(--text-dark);
     border-radius: 50%;
     display: flex;
@@ -174,8 +193,14 @@ body {
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    box-shadow: 0 6px 20px rgba(0, 231, 1, 0.4);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(0, 231, 1, 0.3);
+}
+
+.step-number:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 25px rgba(0, 231, 1, 0.6);
 }
 
 .step-content h4 {
@@ -191,18 +216,21 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 2rem;
-    min-height: calc(100vh - 80px);
+    min-height: 500px;
 }
 
 
 .home-main-section {
     text-align: center;
     margin-bottom: 4rem;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(26, 71, 42, 0.8), rgba(45, 90, 61, 0.6));
-    border-radius: var(--border-radius);
-    border: 1px solid var(--accent-color);
+    padding: 3rem 2rem;
+    background: var(--gradient-primary);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 231, 1, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     animation: fadeInUp 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
 }
 
 .home-main-section h2 {
@@ -218,22 +246,66 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 2rem;
-    min-height: calc(100vh - 80px);
+    min-height: 500px;
 }
 
 
 .about-main-section {
     text-align: center;
     margin-bottom: 4rem;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(26, 71, 42, 0.8), rgba(45, 90, 61, 0.6));
-    border-radius: var(--border-radius);
-    border: 1px solid var(--accent-color);
+    padding: 3rem 2rem;
+    background: var(--gradient-primary);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 231, 1, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     animation: fadeInUp 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
 }
 
 .about-main-section h2 {
     font-size: 2.5rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
+}
+
+/* Animations Pages */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.rules-main-section:hover,
+.home-main-section:hover,
+.about-main-section:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 12px 40px rgba(0, 231, 1, 0.2);
 }
