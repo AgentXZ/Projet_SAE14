@@ -41,7 +41,7 @@ body {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    /* z-index: 1000; */ /* Inutile */
     animation: slideDown 0.6s ease-out;
     backdrop-filter: blur(10px);
 }
@@ -60,8 +60,8 @@ body {
     padding: 0.8rem 1.5rem;
     border-radius: var(--border-radius);
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    /* position: relative; */ /* Inutile */
+    /* overflow: hidden; */ /* Inutile, rien qui déborde */
 }
 
 .nav-links:hover {
@@ -96,8 +96,8 @@ body {
     border: 1px solid rgba(0, 231, 1, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     animation: fadeInUp 0.8s ease-out;
-    position: relative;
-    overflow: hidden;
+    /* position: relative; */ /* Inutile */
+    /* overflow: hidden; */ /* Inutile, rien qui déborde */
 }
 
 .rules-main-section h2 {
@@ -120,8 +120,8 @@ body {
     transition: all 0.3s ease;
     
     animation: slideInLeft 0.6s ease-out;
-    position: relative;
-    overflow: hidden;
+    /* position: relative; */ /* Inutile */
+    /* overflow: hidden; */ /* Inutile, rien qui déborde */
 }
 
 .rules-section h3 {
@@ -229,8 +229,8 @@ body {
     border: 1px solid rgba(0, 231, 1, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     animation: fadeInUp 0.8s ease-out;
-    position: relative;
-    overflow: hidden;
+    /* position: relative; */ /* Inutile */
+    /* overflow: hidden; */ /* Inutile, rien qui déborde */
 }
 
 .home-main-section h2 {
@@ -259,8 +259,8 @@ body {
     border: 1px solid rgba(0, 231, 1, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     animation: fadeInUp 0.8s ease-out;
-    position: relative;
-    overflow: hidden;
+    /* position: relative; */ /* Inutile */
+    /* overflow: hidden; */ /* Inutile, rien qui déborde */
 }
 
 .about-main-section h2 {
