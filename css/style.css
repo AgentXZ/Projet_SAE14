@@ -470,3 +470,103 @@ body {
         opacity: 1;
     }
 }
+
+
+/* Responsive */
+
+/* Mobile */
+@media (max-width: 767px) {
+    .nav-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .nav-menu {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .nav-links {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+    .h3-title {
+        font-size: 2rem;
+    }
+
+    .h3-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .main-section {
+        padding: 2rem 1rem;
+    }
+
+    .main-section-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .section-card {
+        padding: 1.5rem;
+    }
+
+    .section-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .rules-main,
+    .home-main,
+    .about-main {
+        padding: 1.5rem 1rem;
+    }
+
+    .rules-main-section,
+    .home-main-section,
+    .about-main-section {
+        padding: 2rem 1rem;
+    }
+    .rules-main-section h2,
+    .home-main-section h2,
+    .about-main-section h2 {
+        font-size: 2rem;
+    }
+
+    .rules-section {
+        padding: 1.5rem;
+    }
+
+    .rules-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .gameplay-flow {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        margin: 0 auto;
+    }
+
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+
+    .skills-container {
+        justify-content: center;
+    }
+
+    .index-emoji {
+        font-size: 2.5rem;
+    }
+}
