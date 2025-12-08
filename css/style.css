@@ -616,3 +616,42 @@ body {
         padding: 1.8rem;
     }
 }
+
+
+/* Ordinateur */
+@media (min-width: 1024px) {
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+    }
+
+    .nav-menu {
+        gap: 2rem;
+    }
+
+    .main-section {
+        padding: 4rem 2rem;
+    }
+
+    .h3-title {
+        font-size: 3.5rem;
+    }
+
+    .h3-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .main-section-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .rules-main,
+    .home-main,
+    .about-main {
+        padding: 3rem 2rem;
+    }
+}
