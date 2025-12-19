@@ -68,7 +68,7 @@ Projet_SAE14/
 ![Validation WCAG](img_readme/img4.png)
 
 ## 🚢 Déploiement
-- GitHub Pages (branche `main`) — https://agentxz.github.io/Projet_SAE14/
+- GitHub Pages (branche `master`) — https://agentxz.github.io/Projet_SAE14/
 
 ## 👤 Auteur
 Albin Herbelin — albin.herbelin@etu.unicaen.fr — https://github.com/AgentXZ
